@@ -1,0 +1,13 @@
+{
+  "name": "hello_world",
+  "version": "1.0.0",
+  "description": "Hello World",
+  "author": "Ryan Jang <ryan@example.com>",
+  "main": "hello_world.js",
+  "scripts": {
+    "start": "node hello_world.js"
+  },
+  "dependencies": {
+    "express": "^4.16.1"
+  }
+}

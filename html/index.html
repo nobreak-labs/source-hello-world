@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Board - Nobreak</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- CSS 경로 수정 -->
+</head>
+<body>
+    <h1>Simple Board</h1>
+
+    <!-- 게시물 작성 폼 -->
+    <form id="post-form">
+        <input type="text" id="title" placeholder="Title" required>
+        <textarea id="content" placeholder="Content" required></textarea>
+        <input type="file" id="thumbnail">
+        <img id="thumbnail-preview" style="display: none; max-width: 200px; margin-top: 10px;">
+        <button type="submit" id="post-form-submit">Add Post</button>
+    </form>
+
+    <!-- 게시물 리스트 -->
+    <div id="post-list"></div>
+
+    <footer>
+        <p>&copy; 2024 Nobreak. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script> <!-- JavaScript 경로 수정 -->
+</body>
+</html>

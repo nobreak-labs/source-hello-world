@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #333;
+}
+
+#post-form {
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#post-form input[type="text"],
+#post-form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#post-form input[type="file"] {
+    margin-bottom: 10px;
+}
+
+#post-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#post-form button:hover {
+    background-color: #218838;
+}
+
+#post-list {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post-item {
+    width: 100%;
+    background: #fff;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-item img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-bottom: 1px solid #ccc;
+}
+
+.post-item h2 {
+    font-size: 24px;
+    margin: 0;
+    padding: 10px;
+    color: #333;
+}
+
+.post-item p {
+    padding: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+.post-item .post-buttons {
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid #ccc;
+    background-color: #f8f9fa;
+    padding: 10px;
+}
+
+.post-item button {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    padding: 0;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.post-item button:hover {
+    color: #0056b3;
+}
+
+.post-item .button-separator {
+    color: #ccc;
+    margin: 0 10px;
+}
+
+footer {
+    margin-top: auto;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
