@@ -1,12 +1,11 @@
 # Build a binary with dynamically linked
-# Run copy-lib.sh before build
-FROM gcc:12 AS cbuilder
+FROM gcc:12 AS builder
 COPY . /usr/src/hello/
 WORKDIR /usr/src/hello
 RUN gcc hello.c -o hello
 
 FROM scratch
-COPY lib/ /lib/
-COPY lib64/ /lib64/
-COPY --from=cbuilder /usr/src/hello/hello /hello
+COPY --from=builder /lib/x86_64-linux-gnu/ /lib/x86_64-linux-gnu/
+COPY --from=builder /lib64/ /lib64/
+COPY --from=builder /usr/src/hello/hello /hello
 CMD ["/hello"]

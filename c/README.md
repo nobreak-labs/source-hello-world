@@ -9,13 +9,7 @@ docker build -t c-dynamic -f docker/Dockerfile-dynamic .
 ```
 
 ### 2. Dockerfile-dynamic-scratch
-#### 2.1 Library Copy
 
-```bash
-sh docker/copy-lib.sh
-```
-
-#### 2.2 Docker Build
 ```bash
 docker build -t c-dynamic-scratch -f docker/Dockerfile-dynamic-scratch .
 ```
