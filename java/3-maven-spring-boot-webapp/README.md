@@ -1,13 +1,19 @@
 # Java + Maven + Spring Boot + Webapp
 
-## Packaging
+## Docker Image Build
 
 ```bash
-mvn package
+docker build -t maven-spring-boot-app -f docker/Dockerfile .
 ```
 
-## Run
+## Docker Container Run
 
 ```bash
-java -jar target/spring-webapp-0.0.1.jar --server.port=8080
+docker run -d --name maven-spring-boot-app -p 8080:8080 maven-spring-boot-app
+```
+
+## Application Access
+
+```bash
+http://localhost:8080
 ```

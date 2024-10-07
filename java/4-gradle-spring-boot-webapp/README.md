@@ -1,15 +1,15 @@
 # Java + Gradle + Spring Boot + Webapp
 
-## Gradle Wrapper Setting
+## Docker Image Build
 
 ```bash
-gradle wrapper
+docker build -t gradle-spring-boot-app -f docker/Dockerfile .
 ```
 
-## Run
+## Docker Container Run
 
 ```bash
-./gradlew bootRun
+docker run -d --name gradle-spring-boot-app -p 8080:8080 gradle-spring-boot-app
 ```
 
 ## Application Access

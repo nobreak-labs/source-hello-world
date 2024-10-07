@@ -1,13 +1,13 @@
-# Java + Maven + Spring Boot
+# Java + Maven + Spring
 
-## Packaging
+## Docker Image Build
 
 ```bash
-mvn package
+docker build -t maven-spring-app -f docker/Dockerfile .
 ```
 
-## Run
+## Docker Container Run
 
 ```bash
-java -jar target/spring-hello-0.0.1.jar
+docker run -it --name maven-spring-app maven-spring-app
 ```

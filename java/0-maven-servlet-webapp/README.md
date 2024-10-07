@@ -1,16 +1,19 @@
 # Java + Maven + Servlet
 
-## WAR Packaging
+## Docker Image Build
 
 ```bash
-mvn package
+docker build -t maven-servlet-app -f docker/Dockerfile .
 ```
 
-## Deploy WAR Package
+## Docker Container Run
 
-Copy it to the `webapps` directory of the directory pointed to by the `CATALINA_HOME` environment variable.
+```bash
+docker run -d --name maven-servlet-app -p 8080:8080 maven-servlet-app
+```
 
-> ${CATALINA_HOME}/webapps  
-> /usr/local/tomcat/webapps  
+## Application Access
 
-If you copy to the directory, the WAR archive is automatically extracted, and the directory becomes the path of the URL.
+```bash
+http://localhost:8080
+```

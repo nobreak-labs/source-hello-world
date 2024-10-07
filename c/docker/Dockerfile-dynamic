@@ -1,0 +1,9 @@
+# Build a binary with dynamically linked
+FROM gcc:12 AS cbuilder
+COPY . /usr/src/hello/
+WORKDIR /usr/src/hello
+RUN gcc hello.c -o hello
+
+FROM ubuntu:jammy
+COPY --from=cbuilder /usr/src/hello/hello /hello
+CMD ["/hello"]

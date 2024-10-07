@@ -1,15 +1,19 @@
 # Node.js + Express
 
-## Install the dependencies
+## Docker Image Build
 
 ```bash
-npm install
+docker build -t nodejs-express-app -f docker/Dockerfile .
 ```
 
-## Run
+## Docker Container Run
 
 ```bash
-npm start
+docker run -d --name my-express-app -p 8080:3000 nodejs-express-app
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Application Access
+
+```bash
+http://localhost:8080
+```

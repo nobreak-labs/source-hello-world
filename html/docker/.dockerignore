@@ -1,0 +1,16 @@
+# Common
+**/*.md
+
+# Docker
+**/docker-compose.*
+Dockerfile*
+
+# Git
+.gitignore
+.git
+
+## Log file
+**/*.log
+
+## BlueJ files
+**/*.ctxt

@@ -1,14 +1,19 @@
 # Node.Js + React
 
-## ## Install the dependencies
+## Docker Image Build
 
 ```bash
-npm install
+docker build -t nodejs-react-app -f docker/Dockerfile .
 ```
-## Run
+
+## Docker Container Run
 
 ```bash
-npm start
+docker run -d --name nodejs-react-app -p 8080:8080 nodejs-react-app
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Application Access
+
+```bash
+http://localhost:8080
+```

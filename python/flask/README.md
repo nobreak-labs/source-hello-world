@@ -1,19 +1,19 @@
 # Python + Flask
 
-## Install the dependencies
+## Docker Image Build
 
 ```bash
-pip3 install -r requirements.txt
+docker build -t flask-app -f docker/Dockerfile .
 ```
 
-## Set Environments
+## Docker Container Run
 
 ```bash
-export FLASK_APP=hello
+docker run -d --name flask-app -p 8080:5000 flask-app
 ```
 
-## Run
+## Application Access
 
 ```bash
-flask run --host=0.0.0.0 --port=5000
+http://localhost:8080
 ```

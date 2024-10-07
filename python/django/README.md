@@ -1,13 +1,19 @@
 # Python + Django
 
-## Install the dependencies
+## Docker Image Build
 
 ```bash
-pip3 install -r requirements.txt
+docker build -t django-app -f docker/Dockerfile .
 ```
 
-## Run
+## Docker Container Run
 
 ```bash
-python3 hello/manage.py runserver 0.0.0.0:8000
+docker run -d --name django-app -p 8080:8000 django-app
+```
+
+## Application Access
+
+```bash
+http://localhost:8080
 ```
